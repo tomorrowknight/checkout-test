@@ -7,8 +7,16 @@ body {
 	background-size: cover;
 }
 
-h1 {
-	color: #88B04B;
+.success_msg {
+	color: #9abc66;
+	font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+	font-weight: 900;
+	font-size: 40px;
+	margin-bottom: 10px;
+}
+
+.fail_msg {
+	color: #FF6961;
 	font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
 	font-weight: 900;
 	font-size: 40px;
@@ -29,8 +37,15 @@ h3 {
 	margin: 0;
 }
 
-i {
+.checkmark{
 	color: #9ABC66;
+	font-size: 100px;
+	line-height: 200px;
+	margin-left: -15px;
+}
+
+#cross{
+	color: #FF6961;
 	font-size: 100px;
 	line-height: 200px;
 	margin-left: -15px;
@@ -42,7 +57,8 @@ i {
 	border-radius: 4px;
 	box-shadow: 0 2px 3px #C8D0D8;
 	display: inline-block;
-	margin: 0 auto;
+    margin: 0 auto;
+    opacity: 0.85;
 }
 
 .internal-card {
