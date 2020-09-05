@@ -64,16 +64,19 @@ function getPaymentDetails(){
             let card_issuer = data.source.issuer
             let amount = data.currency + "" + data.amount
             $( "<div id=payment-detail></div>").appendTo( ".card-new" );
-            
             $( "<h3> Payment Details </h3>" ).appendTo( "#payment-detail" );
-            $( "<p id='payment_p'><strong>Payment ID: </strong></p>" ).appendTo( "#payment-detail" );
-            $("#payment_p").text(payment_id)
-            $( "<p id='card_type_p'><strong>Card Type:</strong></p>" ).appendTo( "#payment-detail" );
-            $( card_type + "").appendTo( "#card_type_p" );
-            $( "<p id='card_issuer_p'><strong>Card Issuer: </strong></p>" ).appendTo( "#payment-detail" );
-            $( card_issuer + "" ).appendTo( "#card_issuer_p" );
-            $( "<p id='amount_p'><strong>Payment Amount: </strong></p>" ).appendTo( "#payment-detail" );
-            $( amount + "").appendTo( "#amount_p" );
+
+            $( "<p id='payment_p'><strong>Payment ID: </strong> </p>" ).appendTo( "#payment-detail" );
+            $( "<p> + payment_id + </p>").appendTo("#payment_p");
+
+            $( "<p id='card_type_p'><strong> Card Type: </strong> </p>" ).appendTo( "#payment-detail" );
+            $( "<p>" + card_type + "</p>" ).appendTo( "#card_type_p" );
+
+            $( "<p id='card_issuer_p'><strong>Card Issuer: </strong> </p>" ).appendTo( "#payment-detail" );
+            $( "<p>" + card_issuer + "</p>" ).appendTo( "#card_issuer_p" );
+
+            $( "<p id='amount_p'><strong> Payment Amount: </strong> </p>" ).appendTo( "#payment-detail" );
+            $( "<p>" + amount + "</p>" ).appendTo( "amount_p" );
           }else{
             console.log("Failz")
           }
