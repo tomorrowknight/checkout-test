@@ -48,7 +48,8 @@ h3 {
 	color: #FF6961;
 	font-size: 100px;
 	line-height: 200px;
-	margin-left: -15px;
+    margin-left: -15px;
+    font-size: 200px;
 }
 
 .card {
