@@ -51,10 +51,7 @@ function getPaymentDetails(){
     let cko_session_id_param = urlParams.get('cko-session-id');
     const cko_session_id = cko_session_id_param;
     const auth_key = "sk_test_0b9b5db6-f223-49d0-b68f-f6643dd4f808";
-    const payment_detail_div = document.getElementById("payment-detail");
-    if(payment_detail_div){
-      payment_detail_div.remove();
-    }
+    
     $.ajax({
       type: "GET",
       url: "https://api.sandbox.checkout.com/payments/" + cko_session_id,
@@ -81,6 +78,7 @@ function getPaymentDetails(){
             $( "<p id='amount_p'><strong> Payment Amount </strong> </p>" ).appendTo( "#payment-detail" );
             $( "<p>" + amount + "</p>" ).appendTo( "#amount_p" );
           } else if (url_path === "/failure.html" && data.id){
+            console.log("In the fail condition")
             let ref = data.reference
             let status = data.status
             let approval = data.approved
