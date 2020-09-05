@@ -80,6 +80,18 @@ function getPaymentDetails(){
 
             $( "<p id='amount_p'><strong> Payment Amount </strong> </p>" ).appendTo( "#payment-detail" );
             $( "<p>" + amount + "</p>" ).appendTo( "#amount_p" );
+          } else if (url_path === "/failure.html" && data.id){
+            const ref = data.reference
+            const status = data.status
+            const approval = data.approved
+            $( "<p id='ref_p'><strong>Reference </strong> </p>" ).appendTo( "#payment-detail" );
+            $( "<p>" + ref + "</p>" ).appendTo( "#ref_p" );
+
+            $( "<p id='status_p'><strong>Status </strong> </p>" ).appendTo( "#payment-detail" );
+            $( "<p>" + status + "</p>" ).appendTo( "#status_p" );
+
+            $( "<p id='approve_p'><strong>Approval </strong> </p>" ).appendTo( "#payment-detail" );
+            $( "<p>" + approval + "</p>" ).appendTo( "#approve_p" );
           }else{
             console.log("Failz")
           }
