@@ -116,7 +116,12 @@ iframe {
   }
 
   .card {
-    background-color: rgb(245, 245, 245);
+    background: white;
+    padding: 60px;
+    border-radius: 4px;
+    box-shadow: 0 2px 3px #C8D0D8;
+    display: inline-block;
+    margin: 0 auto;
   }
 
   #email_addr {
@@ -164,17 +169,6 @@ iframe {
 #card-frame:focus {
   height:50px;
   font-size:16px;
-}
-
-#details-button {
-	border: none;
-	border-radius: 3px;
-	color: #FFF;
-	font-weight: 500;
-	height: 40px;
-	width: 100%;
-	background-color: #13395E;
-	box-shadow: 0 1px 3px 0 rgba(19, 57, 94, 0.4)
 }
 
 }
