@@ -53,13 +53,3 @@ i {
 	background-color: #13395E;
 	box-shadow: 0 1px 3px 0 rgba(19, 57, 94, 0.4)
 }
-
-.card-new {
-	background: white;
-	padding: 60px;
-	border-radius: 4px;
-	box-shadow: 0 2px 3px #C8D0D8;
-	display: inline-block;
-    margin: 0 auto;
-    opacity: 0;
-}
