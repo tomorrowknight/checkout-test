@@ -67,7 +67,7 @@ function getPaymentDetails(){
             
             $( "<h3> Payment Details </h3>" ).appendTo( "#payment-detail" );
             $( "<p id='payment_p'><strong>Payment ID: </strong></p>" ).appendTo( "#payment-detail" );
-            $( payment_id + "").appendTo("#payment_p" )
+            $("#payment_p").text(payment_id)
             $( "<p id='card_type_p'><strong>Card Type:</strong></p>" ).appendTo( "#payment-detail" );
             $( card_type + "").appendTo( "#card_type_p" );
             $( "<p id='card_issuer_p'><strong>Card Issuer: </strong></p>" ).appendTo( "#payment-detail" );
