@@ -61,7 +61,7 @@ function getPaymentDetails(){
             let card_type = "Card Type: " +  data.source.card_type
             let card_issuer = data.source.issuer
             let amount = "Amount Paid: " + data.currency + "" + data.amount
-            $( "<p>" + payment_id + "</p>" ).appendTo( ".payment-detail" );
+            $( "<p>" + payment_id + "</p>" ).appendTo( "#payment-detail" );
             alert("Payment ID: " + data.id)
           }else{
             console.log("Failz")
