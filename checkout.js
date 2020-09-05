@@ -52,7 +52,9 @@ function getPaymentDetails(){
     const cko_session_id = cko_session_id_param;
     const auth_key = "sk_test_0b9b5db6-f223-49d0-b68f-f6643dd4f808";
     const payment_detail_div = document.getElementById("payment-detail");
-    payment_detail_div.remove();
+    if(payment_detail_div)
+      payment_detail_div.remove();
+    }
     $.ajax({
       type: "GET",
       url: "https://api.sandbox.checkout.com/payments/" + cko_session_id,
@@ -78,18 +80,6 @@ function getPaymentDetails(){
 
             $( "<p id='amount_p'><strong> Payment Amount </strong> </p>" ).appendTo( "#payment-detail" );
             $( "<p>" + amount + "</p>" ).appendTo( "#amount_p" );
-          }else if(url_path === "/failure.html" && data.id){
-            const ref = data.reference
-            const status = data.status
-            const approval = data.approved
-            $( "<p id='ref_p'><strong>Reference </strong> </p>" ).appendTo( "#payment-detail" );
-            $( "<p>" + ref + "</p>" ).appendTo( "#ref_p" );
-
-            $( "<p id='status_p'><strong>Status </strong> </p>" ).appendTo( "#payment-detail" );
-            $( "<p>" + status + "</p>" ).appendTo( "#status_p" );
-
-            $( "<p id='approve_p'><strong>Approval </strong> </p>" ).appendTo( "#payment-detail" );
-            $( "<p>" + approval + "</p>" ).appendTo( "#approve_p" );
           }else{
             console.log("Failz")
           }
