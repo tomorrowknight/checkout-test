@@ -52,9 +52,7 @@ function getPaymentDetails(){
     const cko_session_id = cko_session_id_param;
     const auth_key = "sk_test_0b9b5db6-f223-49d0-b68f-f6643dd4f808";
     const payment_detail_div = document.getElementById("payment-detail");
-    if(payment_detail_div){
-      payment_detail_div.remove();
-    }
+    payment_detail_div.remove();
     $.ajax({
       type: "GET",
       url: "https://api.sandbox.checkout.com/payments/" + cko_session_id,
