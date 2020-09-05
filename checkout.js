@@ -52,9 +52,8 @@ function getPaymentDetails(){
     const auth_key = "sk_test_0b9b5db6-f223-49d0-b68f-f6643dd4f808" 
     $.ajax({
       type: "GET",
-      url: "https://api.sandbox.checkout.com/payments/",
+      url: "https://api.sandbox.checkout.com/payments/" + cko_session_id,
       headers: {'Authorization':  auth_key},
-      data: {'id':cko_session_id },
       'contentType': 'application/json',
       success: function(data){
           if(data.id){
