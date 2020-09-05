@@ -45,14 +45,16 @@ $.ajax({
 });
 }
 
-function getPaymentDetails(cko_session_id){
-    console.log("CKO ID: " + cko_session_id)
+function getPaymentDetails(){
+    const urlParams = new URLSearchParams(window.location.search);
+    let cko_session_id_param = urlParams.get('cko-session-id');
+    const cko_session_id = cko_session_id_param
     const auth_key = "sk_test_0b9b5db6-f223-49d0-b68f-f6643dd4f808" 
     $.ajax({
       type: "GET",
       url: "https://api.sandbox.checkout.com/payments/",
       headers: {'Authorization':  auth_key},
-      data: JSON.stringify({'id':cko_session_id }),
+      data: {'id':cko_session_id },
       'contentType': 'application/json',
       success: function(data){
           if(data.id){
