@@ -57,10 +57,11 @@ function getPaymentDetails(){
       'contentType': 'application/json',
       success: function(data){
           if(data.id){
-            let txt1 = "<p>Payment ID: </p>";
+            /*let txt1 = "<p>Payment ID: </p>";
             let txt2 = $("<p></p>").text(id);
             let txt3 = document.createElement("p");
-            $("payment-detail").append(txt1, txt2, txt3);
+            $("payment-detail").append(txt1, txt2, txt3);*/
+            alert(data.id)
           }else{
             console.log("Failz")
           }
