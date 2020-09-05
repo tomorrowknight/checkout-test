@@ -29,7 +29,7 @@ console.log("SR token: " + token)
 $.ajax({
   type: "POST",
   url: "https://integrations-cko.herokuapp.com/pay3d",
-  data: JSON.stringify({'token':token , 'success_url' :"file:///Users/alvinarulselvan/Documents/checkout_test/success.html", 'failure_url' :"file:///Users/alvinarulselvan/Documents/checkout_test/failure.html"}),
+  data: JSON.stringify({'token':token , 'success_url' :"https://checkout-test-alvinarul.netlify.app/success.html", 'failure_url' :"https://checkout-test-alvinarul.netlify.app/failure.html"}),
   'processData': false,
   'contentType': 'application/json',
   success: function(data){
