@@ -64,7 +64,7 @@ function getPaymentDetails(){
             let card_issuer = data.source.issuer
             let amount = data.currency + "" + data.amount
             $( "<div id=payment-detail></div>").appendTo( ".card-new" );
-            $( "<h3> Payment Details </h3>" ).appendTo( "#payment-detail" );
+            $( "<h2> Payment Details </h3>" ).appendTo( "#payment-detail" );
 
             $( "<p id='payment_p'><strong>Payment ID </strong> </p>" ).appendTo( "#payment-detail" );
             $( "<p>" +  payment_id + "</p>").appendTo("#payment_p");

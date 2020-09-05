@@ -19,6 +19,13 @@ p {
 	margin: 0;
 }
 
+h3 {
+	color: #404F5E;
+	font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+	font-size: 30px;
+	margin: 0;
+}
+
 i {
 	color: #9ABC66;
 	font-size: 100px;
