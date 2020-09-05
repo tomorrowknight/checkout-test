@@ -1,2 +1,2 @@
 # checkout-test
-Checkout.com TAPI Test
+Checkout.com API Test
