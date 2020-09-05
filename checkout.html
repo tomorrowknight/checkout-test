@@ -8,12 +8,19 @@
 	<link rel="stylesheet" href="style.css">
 </head>
 <body>
+  <div class="card-container">
 	<div class="card">
 		<div class="internal-card">
+      <h3> Product Details</h3>
 			<!-- add frames script -->
 			<script src="https://cdn.checkout.com/js/framesv2.min.js"></script>
 			<form id="payment-form" method="POST" action="http://www.test.com">
-				<img src="https://pbs.twimg.com/profile_images/963677969628753925/9MCeOPow_400x400.jpg" alt="alvin_arul">
+        <img src="https://pbs.twimg.com/profile_images/963677969628753925/9MCeOPow_400x400.jpg" alt="alvin_arul">
+        <div class="price_card">
+          <p>1x Alvin Arulselvan Photograph</p>
+          <p id="total">Total (includes shipping)</p>
+          <p id="total_amount">USD $100</p>
+        </div>
 		</div>
 		<h3> User Details</h3>
 		<label>Name</label>
@@ -34,6 +41,7 @@
 		<p class="success-payment-message"></p>
 		</form>
 		<script src="checkout.js" type="text/javascript"></script>
-	</div>
+  </div>
+  </div>
 </body>
 </html>

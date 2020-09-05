@@ -5,8 +5,8 @@
 }
 
 html {
-  padding: 1rem;
-  background: #EBF0F5;
+	padding: 1rem;
+  background-image: url('./clementi_crest_445.jpg');
 	font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 	background-repeat: no-repeat;
 	background-attachment: fixed;
@@ -116,13 +116,12 @@ iframe {
 	}
 	.card {
 		background: white;
-		padding: 60px;
+		padding: 30px;
 		border-radius: 4px;
 		box-shadow: 0 2px 3px #C8D0D8;
 		display: inline-block;
     margin: 0 auto;
-    justify-content: center;
-    align-items: center;
+    opacity: 0.85;
 	}
 	#email_addr {
 		background-color: rgba(0, 0, 0, 0);
@@ -165,11 +164,52 @@ iframe {
 		height: 50px;
 		font-size: 16px;
   }
-  .internal-card {
-    border-radius: 200px;
-    height: 200px;
-    width: 200px;
-    background: #F8FAF5;
-    margin: 0 auto;
+  
+  p {
+    color: #404F5E;
+    font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    margin: 0;
   }
+
+  label {
+    color: #404F5E;
+    font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  input {
+    color: #404F5E;
+    font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    margin: 0;
+  }
+
+  h3 {
+    color: #404F5E;
+    font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+    font-size: 20px;
+  }
+
+  #total{
+    color: #404F5E;
+    font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+  }
+
+  #total_amount{
+    color: #404F5E;
+    font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
+    font-size: 16px;
+    font-weight: bold;
+    padding-top: 2px;
+  }
+  .card-container{
+    position: absolute;
+    top: 8%;
+    left: 32%;
+  }
+  
 }
