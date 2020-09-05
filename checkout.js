@@ -44,3 +44,25 @@ $.ajax({
   }
 });
 }
+
+function getPaymentDetails(cko_session_id){
+    console.log("CKO ID: " + cko_session_id)
+    const auth_header = "sk_test_0b9b5db6-f223-49d0-b68f-f6643dd4f808" 
+    $.ajax({
+      type: "GET",
+      url: "https://integrations-cko.herokuapp.com/pay3d",
+      headers: { 'Authorization':  auth_header},
+      data: JSON.stringify({'id':cko_session_id }),
+      'contentType': 'application/json',
+      success: function(data){
+          if(data.id){
+            alert(data.id)
+          }else{
+            console.log("Failz")
+          }
+      },
+      error: function(){
+          alert('something bad happened' + data);
+      }
+    });
+}
