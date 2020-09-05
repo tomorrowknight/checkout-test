@@ -123,7 +123,7 @@ iframe {
     margin: 0 auto;
     opacity: 0.85;
 	}
-	#email_addr {
+	#email-addr {
 		background-color: rgba(0, 0, 0, 0);
 		border: none;
 		outline: none;
@@ -131,11 +131,11 @@ iframe {
 		transition: height 1s;
 		-webkit-transition: height 1s;
 	}
-	#email_addr:focus {
+	#email-addr:focus {
 		height: 50px;
 		font-size: 16px;
 	}
-	#full_name {
+	#full-name {
 		background-color: rgba(0, 0, 0, 0);
 		border: none;
 		outline: none;
@@ -143,28 +143,24 @@ iframe {
 		transition: height 1s;
 		-webkit-transition: height 1s;
 	}
-	#full_name:focus {
+	#full-name:focus {
 		height: 50px;
 		font-size: 16px;
-	}
-	#f {
+  }
+
+  .card-frame {
 		background-color: rgba(0, 0, 0, 0);
-		color: black;
 		border: none;
 		outline: none;
 		height: 30px;
 		transition: height 1s;
 		-webkit-transition: height 1s;
-	}
-	#full_name:focus {
-		height: 50px;
-		font-size: 16px;
 	}
 	#card-frame:focus {
 		height: 50px;
 		font-size: 16px;
   }
-  
+
   p {
     color: #404F5E;
     font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
@@ -184,6 +180,7 @@ iframe {
     font-family: "Nunito Sans", "Helvetica Neue", sans-serif;
     font-size: 14px;
     margin: 0;
+   background-color: transparent;
   }
 
   h3 {
