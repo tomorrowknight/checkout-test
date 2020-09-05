@@ -84,7 +84,7 @@ function getPaymentDetails(){
             $( "<p>" + amount + "</p>" ).appendTo( "#amount_p" );
           } else if (url_path === "/failure.html" && data.id){
             const ref_para = document.getElementById("ref_p")
-            if(ref_p){
+            if(ref_para){
               payment_detail_div.remove()
             }
             let ref = data.reference
