@@ -1,22 +1,23 @@
+<!DOCTYPE html>
 <html>
-  <head>
-    <link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-    <script src="checkout.js" type="text/javascript"></script>
-    <link rel="stylesheet" href="style-message.css">
-
-  </head>
-    <body>
-      <div class="card">
-      <div class = "internal-card">
-        <i class="checkmark">✓</i>
-      </div>
-        <h1>Success</h1> 
-        <p>Purchased confirmed! <br> Check your email for your order</p>
-        <p></p>
-        <button id="details-button" onclick="getPaymentDetails()">View Payment Details</button>
-      </div>
-      <div class="card"></div>
-      <div id="payment-detail"></div>
-    </body>
+	<head>
+		<link href="https://fonts.googleapis.com/css?family=Nunito+Sans:400,400i,700,900&display=swap" rel="stylesheet">
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="checkout.js" type="text/javascript"></script>
+		<link rel="stylesheet" href="style-message.css">
+	</head>
+	<body>
+		<div class="card">
+			<div class = "internal-card">
+				<i class="checkmark">✓</i>
+			</div>
+			<h1>Success</h1>
+			<p>Purchased confirmed! <br> Check your email for your order</p>
+			<p></p>
+			<button id="details-button" onclick="getPaymentDetails()">View Payment Details</button>
+		</div>
+		<div class="card">
+			<div id="payment-detail"></div>
+		</div>
+	</body>
 </html>
