@@ -50,8 +50,8 @@ function getPaymentDetails(){
     let cko_session_id_param = urlParams.get('cko-session-id');
     const cko_session_id = cko_session_id_param
     const auth_key = "sk_test_0b9b5db6-f223-49d0-b68f-f6643dd4f808" 
-    var myobj = document.getElementById("payment-detail");
-    myobj.remove();
+    const payment_detail_div = document.getElementById("payment-detail");
+    payment_detail_div.remove();
     $.ajax({
       type: "GET",
       url: "https://api.sandbox.checkout.com/payments/" + cko_session_id,
@@ -61,12 +61,13 @@ function getPaymentDetails(){
           if(data.id){
             let payment_id = "Payment ID: " + data.id
             let card_type = "Card Type: " +  data.source.card_type
-            let card_issuer = data.source.issuer
+            let card_issuer = "Card Issuer: " + data.source.issuer
             let amount = "Amount Paid: " + data.currency + "" + data.amount
             $( "<div id=payment-detail></div>").appendTo( ".card-new" );
             
             $( "<h3> Payment Details </h3>" ).appendTo( "#payment-detail" );
-            $( "<p>" + data.id + "</p>" ).appendTo( "#payment-detail" );
+            $( "<p id='payment_p'</p>" ).appendTo( "#payment-detail" );
+            $("<strong>" + payment_id + "</strong>").appendTo("#payment_p")
             $( "<p>" + card_type + "</p>" ).appendTo( "#payment-detail" );
             $( "<p>" + card_issuer + "</p>" ).appendTo( "#payment-detail" );
             $( "<p>" + amount + "</p>" ).appendTo( "#payment-detail" );
