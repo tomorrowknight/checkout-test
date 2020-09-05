@@ -2,6 +2,9 @@ body {
 	text-align: center;
 	padding: 40px 0;
     background-image: url('./clementi_crest_445.jpg');
+    background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-size: cover;
 }
 
 h1 {
