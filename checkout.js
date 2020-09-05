@@ -59,18 +59,21 @@ function getPaymentDetails(){
       'contentType': 'application/json',
       success: function(data){
           if(data.id){
-            let payment_id = "Payment ID: " + data.id
-            let card_type = "Card Type: " +  data.source.card_type
-            let card_issuer = "Card Issuer: " + data.source.issuer
-            let amount = "Amount Paid: " + data.currency + "" + data.amount
+            let payment_id = data.id
+            let card_type = data.source.card_type
+            let card_issuer = data.source.issuer
+            let amount = data.currency + "" + data.amount
             $( "<div id=payment-detail></div>").appendTo( ".card-new" );
             
             $( "<h3> Payment Details </h3>" ).appendTo( "#payment-detail" );
-            $( "<p id='payment_p'</p>" ).appendTo( "#payment-detail" );
-            $("<strong>" + data.id + "</strong>").appendTo("#payment_p")
-            $( "<p>" + card_type + "</p>" ).appendTo( "#payment-detail" );
-            $( "<p>" + card_issuer + "</p>" ).appendTo( "#payment-detail" );
-            $( "<p>" + amount + "</p>" ).appendTo( "#payment-detail" );
+            $( "<p id='payment_p'>Payment ID: </p>" ).appendTo( "#payment-detail" );
+            $( "<strong>" + payment_id + "</strong>").appendTo("#payment_p" )
+            $( "<p id='card_type_p'>Card Type: </p>" ).appendTo( "#payment-detail" );
+            $( "<p>" + card_type + "</p>" ).appendTo( "#card_type_p" );
+            $( "<p id='card_issuer_p'>Card Issuer: </p>" ).appendTo( "#payment-detail" );
+            $( "<p>" + card_issuer + "</p>" ).appendTo( "#card_issuer_p" );
+            $( "<p id='amount_p'>Payment Amount: </p>" ).appendTo( "#payment-detail" );
+            $( "<p>" + amount + "</p>" ).appendTo( "amount_p" );
           }else{
             console.log("Failz")
           }
